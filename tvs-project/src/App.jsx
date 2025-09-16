@@ -15,7 +15,9 @@ function App() {
           <div className="flex items-center gap-4 text-sm">
             <Link to="/" className={`hover:text-blue-600 ${location.pathname==='/'?'text-blue-600':'text-gray-700'}`}>Home</Link>
             <Link to="/about" className={`hover:text-blue-600 ${location.pathname==='/about'?'text-blue-600':'text-gray-700'}`}>About</Link>
-            <Link to="/book" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Book Visit</Link>
+            {location.pathname !== '/' && (
+              <Link to="/book" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Book Visit</Link>
+            )}
           </div>
         </nav>
       </header>
@@ -47,7 +49,9 @@ function App() {
         </div>
       </footer>
 
-      <Link to="/book" className="fixed bottom-6 right-6 bg-blue-600 text-white px-5 py-3 rounded-full shadow-lg hover:bg-blue-700">Book Site Visit</Link>
+      {location.pathname !== '/' && (
+        <Link to="/book" className="fixed bottom-6 right-6 bg-blue-600 text-white px-5 py-3 rounded-full shadow-lg hover:bg-blue-700">Book Site Visit</Link>
+      )}
     </div>
   );
 }
