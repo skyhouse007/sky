@@ -25,12 +25,15 @@ function ThanisandraProject() {
 
   const sliderSettings = {
     dots: true,
+    arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
+    pauseOnHover: true,
+    dotsClass: 'slick-dots slick-dots-bottom',
   };
 
   const sliderImages = [
@@ -45,7 +48,7 @@ function ThanisandraProject() {
           {sliderImages.map((img, index) => (
             <div key={index}>
               <div
-                className="bg-cover bg-center h-96 text-white flex items-center"
+                className="bg-cover bg-center min-h-[280px] md:h-[420px] lg:h-[520px] text-white flex items-center"
                 style={{ backgroundImage: `url('${img}')` }}
               >
                 <div className="container mx-auto px-6 text-center bg-black bg-opacity-50 p-6 rounded-lg">
