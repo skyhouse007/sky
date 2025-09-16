@@ -1,33 +1,33 @@
 // src/components/GodrejProject.jsx
 import React from 'react';
 import SiteVisitForm from '../SiteVisitForm';
-import image1 from '../assets/1.jpg'; // Placeholder, replace with actual Godrej project images
 
 function GodrejProject() {
   const amenities = [
-    "Swimming Pool",
-    "Indoor Gymnasium",
-    "Badminton Court",
-    "Jogging Track",
-    "Yoga Lawn",
-    "Kids Play Area",
-    "Party Hall & Pantry",
-    "Pool Deck with Shower",
+    'Swimming Pool',
+    'Indoor Gymnasium',
+    'Badminton Court',
+    'Jogging Track',
+    'Yoga Lawn',
+    'Kids Play Area',
+    'Party Hall & Pantry',
+    'Pool Deck with Shower',
   ];
 
   const galleryImages = [
-    "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=2574&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=2670&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1605146769289-440113cc3d00?q=80&w=2670&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2670&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=2670&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1628592102751-ba83b0314276?q=80&w=2574&auto=format&fit=crop",
+    'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1600&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1600&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1605146769289-440113cc3d00?q=80&w=1600&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1600&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1600&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1628592102751-ba83b0314276?q=80&w=1600&auto=format&fit=crop',
   ];
+
+  const heroImage = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop';
 
   return (
     <div className="font-sans bg-gray-50">
-      {/* Hero Section */}
-      <section className="bg-cover bg-center h-96 text-white flex items-center" style={{ backgroundImage: `url(${image1})` }}>
+      <section className="bg-cover bg-center h-96 text-white flex items-center" style={{ backgroundImage: `url(${heroImage})` }}>
         <div className="container mx-auto px-6 text-center bg-black bg-opacity-50 p-6 rounded-lg">
           <h2 className="text-4xl font-bold mb-2">Godrej MSR City</h2>
           <p className="text-xl">Shettigere, Bangalore</p>
@@ -37,7 +37,6 @@ function GodrejProject() {
       </section>
 
       <main className="container mx-auto px-6 py-12">
-        {/* Overview Section */}
         <section id="about" className="mb-12">
           <h3 className="text-3xl font-bold text-center text-gray-800 mb-6">Overview</h3>
           <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -62,7 +61,6 @@ function GodrejProject() {
           </div>
         </section>
 
-        {/* Price Section */}
         <section id="price" className="mb-12">
           <h3 className="text-3xl font-bold text-center text-gray-800 mb-6">Price Section</h3>
           <div className="grid md:grid-cols-2 gap-8 text-center">
@@ -79,7 +77,6 @@ function GodrejProject() {
           </div>
         </section>
 
-        {/* Amenities Section */}
         <section id="amenities" className="mb-12">
           <h3 className="text-3xl font-bold text-center text-gray-800 mb-6">Our Amenities</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -91,7 +88,6 @@ function GodrejProject() {
           </div>
         </section>
 
-        {/* Gallery Section */}
         <section id="gallery" className="mb-12">
           <h3 className="text-3xl font-bold text-center text-gray-800 mb-6">Gallery</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -103,7 +99,6 @@ function GodrejProject() {
           </div>
         </section>
 
-        {/* Location Section */}
         <section id="location" className="mb-12">
           <h3 className="text-3xl font-bold text-center text-gray-800 mb-6">Location Advantages</h3>
           <div className="grid md:grid-cols-2 gap-8">
@@ -135,7 +130,6 @@ function GodrejProject() {
           </div>
         </section>
 
-        {/* About Developer Section */}
         <section id="developer" className="mb-12">
           <h3 className="text-3xl font-bold text-center text-gray-800 mb-6">About the Developer</h3>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto text-center">
@@ -143,7 +137,6 @@ function GodrejProject() {
           </p>
         </section>
 
-        {/* Contact Section */}
         <section id="contact" className="bg-gray-100 py-12 rounded-lg">
           <div className="container mx-auto px-6">
             <h3 className="text-3xl font-bold text-center text-gray-800 mb-6">We're Here to Help You Find Your Perfect Property</h3>

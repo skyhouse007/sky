@@ -1,30 +1,27 @@
-// src/import image2 from '../assets/2.jpg';mponents/ThanisandraProject.jsx
-import React from "react";
-import Slider from "react-slick";
-import SiteVisitForm from "../SiteVisitForm";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import image1 from "../assets/1.jpg";
-import image2 from "../assets/2.jpg";
-import logo from "../assets/logo.png";
+// src/components/ThanisandraProject.jsx
+import React from 'react';
+import Slider from 'react-slick';
+import SiteVisitForm from '../SiteVisitForm';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 function ThanisandraProject() {
   const amenities = [
-    "Basketball Court",
-    "Jogging Track",
-    "Billiards Table",
-    "Swimming Pools",
-    "GYMNASIUM",
-    "Tennis Court",
+    'Basketball Court',
+    'Jogging Track',
+    'Billiards Table',
+    'Swimming Pools',
+    'GYMNASIUM',
+    'Tennis Court',
   ];
 
   const galleryImages = [
-    image1,
-    image2,
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2670&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=2670&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2670&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1593696140826-c58b02198d47?q=80&w=2670&auto=format&fit=crop",
+    'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1600&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1600&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1593696140826-c58b02198d47?q=80&w=1600&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1600&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1600&auto=format&fit=crop',
   ];
 
   const sliderSettings = {
@@ -38,13 +35,12 @@ function ThanisandraProject() {
   };
 
   const sliderImages = [
-    image1,
-    image2,
+    'https://images.unsplash.com/photo-1600585154154-1e1f4d6f9ff8?q=80&w=1600&auto=format&fit=crop',
+    'https://images.unsplash.com/photo-1560185127-6ed189bf02f4?q=80&w=1600&auto=format&fit=crop',
   ];
 
   return (
     <div className="font-sans bg-gray-50">
-      {/* Hero Section */}
       <section>
         <Slider {...sliderSettings}>
           {sliderImages.map((img, index) => (
@@ -65,7 +61,6 @@ function ThanisandraProject() {
       </section>
 
       <main className="container mx-auto px-6 py-12">
-        {/* EOI Section */}
         <section id="eoi" className="mb-12 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-6 rounded-lg shadow-md">
           <h3 className="text-2xl font-bold mb-2">Pre-Launch: Expression of Interest (EOI) is Now Open!</h3>
           <p className="text-lg">
@@ -73,7 +68,6 @@ function ThanisandraProject() {
           </p>
         </section>
 
-        {/* Overview Section */}
         <section id="about" className="mb-12">
           <h3 className="text-3xl font-bold text-center text-gray-800 mb-6">Overview</h3>
           <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -100,7 +94,6 @@ function ThanisandraProject() {
           </div>
         </section>
 
-        {/* Price Section */}
         <section id="price" className="mb-12">
           <h3 className="text-3xl font-bold text-center text-gray-800 mb-6">Price</h3>
           <div className="overflow-x-auto">
@@ -133,7 +126,6 @@ function ThanisandraProject() {
           </div>
         </section>
 
-        {/* Site & Floor Plan Section */}
         <section id="site-plan" className="mb-12 text-center">
           <h3 className="text-3xl font-bold text-gray-800 mb-6">Site & Floor Plan</h3>
           <div className="flex flex-wrap justify-center gap-4">
@@ -141,7 +133,7 @@ function ThanisandraProject() {
             <button className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300">2 BHK Unit Plan</button>
             <button className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300">3 BHK Unit Plan</button>
             <a
-              href="/tvs-project-brochure.pdf"
+              href="/Thanisandra%20-%20VP%20deck.pdf"
               download
               className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700"
             >
@@ -150,7 +142,6 @@ function ThanisandraProject() {
           </div>
         </section>
 
-        {/* Amenities Section */}
         <section id="amenities" className="mb-12">
           <h3 className="text-3xl font-bold text-center text-gray-800 mb-6">Our Amenities</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -163,7 +154,6 @@ function ThanisandraProject() {
           </div>
         </section>
 
-        {/* EMI Plan Section */}
         <section id="emi-plan" className="mb-12 bg-blue-50 p-8 rounded-lg shadow-lg text-center">
           <h3 className="text-3xl font-bold text-gray-800 mb-4">Special EMI Plan for Salaried Employees</h3>
           <p className="text-gray-600 text-lg mb-2">
@@ -184,7 +174,6 @@ function ThanisandraProject() {
           </p>
         </section>
 
-        {/* Gallery Section */}
         <section id="gallery" className="mb-12">
           <h3 className="text-3xl font-bold text-center text-gray-800 mb-6">Gallery</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -196,7 +185,6 @@ function ThanisandraProject() {
           </div>
         </section>
 
-        {/* Location Section */}
         <section id="location" className="mb-12">
           <h3 className="text-3xl font-bold text-center text-gray-800 mb-6">Our Location</h3>
           <div className="grid md:grid-cols-2 gap-8">
@@ -226,7 +214,6 @@ function ThanisandraProject() {
           </div>
         </section>
 
-        {/* Virtual Tour Section */}
         <section id="virtual-tour" className="mb-12 text-center">
           <h3 className="text-3xl font-bold text-gray-800 mb-6">Virtual Site Tour</h3>
           <div className="relative h-96 bg-gray-300 rounded-lg shadow-lg flex items-center justify-center">
@@ -234,7 +221,6 @@ function ThanisandraProject() {
           </div>
         </section>
 
-        {/* About Developer Section */}
         <section id="developer" className="mb-12">
           <h3 className="text-3xl font-bold text-center text-gray-800 mb-6">About the Developer</h3>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto text-center">
@@ -242,7 +228,6 @@ function ThanisandraProject() {
           </p>
         </section>
 
-        {/* Why Invest Section */}
         <section id="investment" className="mb-12">
           <h3 className="text-3xl font-bold text-center text-gray-800 mb-6">Why Invest in TVS Emerald, Thanisandra Road?</h3>
           <p className="text-gray-600 text-lg max-w-4xl mx-auto text-center mb-8">
@@ -279,7 +264,6 @@ function ThanisandraProject() {
           </div>
         </section>
 
-        {/* Contact Section */}
         <section id="contact" className="bg-gray-100 py-12 rounded-lg">
           <div className="container mx-auto px-6">
             <h3 className="text-3xl font-bold text-center text-gray-800 mb-6">Book Your Site Visit</h3>

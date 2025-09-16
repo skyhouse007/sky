@@ -1,7 +1,6 @@
 // src/components/Projects.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import image1 from "../assets/1.jpg";
 
 const projects = [
   {
@@ -9,16 +8,15 @@ const projects = [
     name: 'TVS Emerald Thanisandra',
     location: 'Thanisandra, North Bangalore',
     price: '₹ 1.32 Cr* Onwards',
-    image: image1,
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop',
   },
   {
     id: 'godrej-msr-city',
     name: 'Godrej MSR City',
     location: 'Shettigere, Bangalore',
     price: '₹ 1.23 Cr* Onwards',
-    image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=2574&auto=format&fit=crop', // Placeholder
+    image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1600&auto=format&fit=crop',
   },
-  // Add more projects here in the future
 ];
 
 function Projects() {
