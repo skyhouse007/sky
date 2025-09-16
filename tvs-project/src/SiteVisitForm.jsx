@@ -19,9 +19,56 @@ function SiteVisitForm() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError('');
+
+    const project = projects.find(p => p.id === formData.projectId);
+    const payload = {
+      timestamp: new Date().toISOString(),
+      projectId: formData.projectId,
+      projectName: project ? project.name : '',
+      name: formData.name,
+      phone: formData.phone,
+      email: formData.email,
+      date: formData.date,
+      time: formData.time,
+      contactMethod: formData.contactMethod,
+      notes: formData.notes,
+      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
+    };
+
+    const webhook = import.meta.env.VITE_ZAPIER_WEBHOOK_URL;
+
+    try {
+      if (webhook) {
+        const res = await fetch(webhook, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+          mode: 'cors',
+          keepalive: true,
+        });
+        if (!res.ok) throw new Error(`Webhook error: ${res.status}`);
+      } else {
+        // No webhook configured; log for admin visibility without affecting UX
+        console.warn('VITE_ZAPIER_WEBHOOK_URL is not set. Submission stored locally.');
+        const key = 'pending_site_visits';
+        const existing = JSON.parse(localStorage.getItem(key) || '[]');
+        existing.push(payload);
+        localStorage.setItem(key, JSON.stringify(existing));
+      }
+      setSubmitted(true);
+    } catch (err) {
+      console.error(err);
+      setError('Could not submit right now. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const timeSlots = [
