@@ -36,6 +36,19 @@ function GodrejProject() {
         </div>
       </section>
 
+      <div className="sticky top-16 z-40 bg-white/80 backdrop-blur border-b border-gray-200">
+        <div className="container mx-auto px-6">
+          <nav className="flex gap-4 overflow-x-auto no-scrollbar py-3 text-sm">
+            <a href="#about" className="px-3 py-1 rounded-full hover:bg-gray-100">Overview</a>
+            <a href="#price" className="px-3 py-1 rounded-full hover:bg-gray-100">Price</a>
+            <a href="#amenities" className="px-3 py-1 rounded-full hover:bg-gray-100">Amenities</a>
+            <a href="#gallery" className="px-3 py-1 rounded-full hover:bg-gray-100">Gallery</a>
+            <a href="#location" className="px-3 py-1 rounded-full hover:bg-gray-100">Location</a>
+            <a href="#contact" className="px-3 py-1 rounded-full hover:bg-gray-100">Contact</a>
+          </nav>
+        </div>
+      </div>
+
       <main className="container mx-auto px-6 py-12">
         <div className="mb-6"><a href="/" className="text-sm text-blue-600 hover:underline">← Back to Projects</a></div>
         <section id="about" className="mb-12">
