@@ -37,6 +37,7 @@ function GodrejProject() {
       </section>
 
       <main className="container mx-auto px-6 py-12">
+        <div className="mb-6"><a href="/" className="text-sm text-blue-600 hover:underline">← Back to Projects</a></div>
         <section id="about" className="mb-12">
           <h3 className="text-3xl font-bold text-center text-gray-800 mb-6">Overview</h3>
           <div className="grid md:grid-cols-2 gap-8 items-center">

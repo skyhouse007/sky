@@ -30,9 +30,8 @@ function About() {
           </div>
         </div>
         <div className="flex flex-wrap gap-3">
-          <Link to="/book" className="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700">Book Site Visit</Link>
-          <a href="mailto:" className="bg-gray-200 text-gray-800 px-5 py-2 rounded-lg hover:bg-gray-300">Email</a>
-          <a href="tel:" className="bg-gray-200 text-gray-800 px-5 py-2 rounded-lg hover:bg-gray-300">Call</a>
+          <Link to="/book" className="bg-blue-600 text-white px-5 py-2.5 rounded-lg hover:bg-blue-700">Book Site Visit</Link>
+          <Link to="/" className="bg-gray-200 text-gray-800 px-5 py-2.5 rounded-lg hover:bg-gray-300">View Projects</Link>
         </div>
       </div>
       <p className="text-xs text-gray-500 mt-6 text-center">RERA Authorized Channel Partner</p>

@@ -60,6 +60,7 @@ function ThanisandraProject() {
       </section>
 
       <main className="container mx-auto px-6 py-12">
+        <div className="mb-6"><a href="/" className="text-sm text-blue-600 hover:underline">← Back to Projects</a></div>
         <section id="eoi" className="mb-12 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-6 rounded-lg shadow-md">
           <h3 className="text-2xl font-bold mb-2">Pre-Launch: Expression of Interest (EOI) is Now Open!</h3>
           <p className="text-lg">

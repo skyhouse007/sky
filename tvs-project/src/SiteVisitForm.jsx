@@ -12,6 +12,7 @@ function SiteVisitForm() {
     contactMethod: "phone",
     notes: "",
   });
+  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,9 +21,7 @@ function SiteVisitForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(
-      `Thanks, ${formData.name}. Your ${formData.projectId ? projects.find(p=>p.id===formData.projectId)?.name : ""} site visit is requested for ${formData.date} at ${formData.time}. We will contact you via ${formData.contactMethod}.`
-    );
+    setSubmitted(true);
   };
 
   const timeSlots = [
@@ -33,6 +32,24 @@ function SiteVisitForm() {
     "15:00",
     "16:00",
   ];
+
+  if (submitted) {
+    const projectName = formData.projectId ? projects.find(p=>p.id===formData.projectId)?.name : '';
+    return (
+      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md text-center">
+        <div className="mx-auto mb-4 w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
+          <svg className="w-7 h-7 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 6L9 17l-5-5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+        </div>
+        <h2 className="text-2xl font-bold text-gray-800">Visit Requested</h2>
+        <p className="text-gray-600 mt-2">{projectName ? projectName + ' — ' : ''}{formData.date} at {formData.time}</p>
+        <p className="text-gray-500 mt-1 text-sm">We will reach out via {formData.contactMethod} to confirm.</p>
+        <div className="mt-6 flex justify-center gap-3">
+          <button onClick={()=>setSubmitted(false)} className="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300">Book Another</button>
+          <a href="/" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Home</a>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
