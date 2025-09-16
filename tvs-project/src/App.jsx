@@ -18,7 +18,10 @@ function App() {
       <header className="sticky top-0 z-50">
         <div className="bg-white/70 dark:bg-gray-900/60 backdrop-blur border-b border-gray-200/70 dark:border-gray-800">
           <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <Link to="/" className="text-xl font-extrabold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Akash Khandelwal</Link>
+          <Link to="/" className="flex items-center gap-3">
+            <img src="https://cdn.builder.io/api/v1/image/assets%2F1600d1bbc2554feab633ece721d56015%2F82204d7746c54a13afe18a0d89ca44b2?format=webp&width=200" alt="Logo" className="h-10 w-10 rounded-full object-cover ring-2 ring-blue-600/30" />
+            <span className="text-xl font-extrabold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Akash Khandelwal</span>
+          </Link>
           <div className="flex items-center gap-4 text-sm">
             <Link to="/" className={`hover:text-blue-600 ${location.pathname==='/'?'text-blue-600':'text-gray-700'}`}>Home</Link>
             <Link to="/about" className={`hover:text-blue-600 ${location.pathname==='/about'?'text-blue-600':'text-gray-700'}`}>About</Link>
