@@ -49,7 +49,7 @@ function ThanisandraProject() {
                 style={{ backgroundImage: `url('${img}')` }}
               >
                 <div className="container mx-auto px-6 text-center bg-black bg-opacity-50 p-6 rounded-lg">
-                  <h2 className="text-4xl font-bold mb-2">TVS Emerald Thanisandra</h2>
+                  <h2 className="text-4xl font-extrabold mb-2">TVS Emerald Thanisandra</h2>
                   <p className="text-xl">At Thanisandra, North Bangalore</p>
                   <p className="text-2xl font-bold mt-4">₹ 1.32 Cr* Onwards</p>
                 </div>
@@ -58,6 +58,19 @@ function ThanisandraProject() {
           ))}
         </Slider>
       </section>
+
+      <div className="sticky top-16 z-40 bg-white/80 backdrop-blur border-b border-gray-200">
+        <div className="container mx-auto px-6">
+          <nav className="flex gap-4 overflow-x-auto no-scrollbar py-3 text-sm">
+            <a href="#about" className="px-3 py-1 rounded-full hover:bg-gray-100">Overview</a>
+            <a href="#price" className="px-3 py-1 rounded-full hover:bg-gray-100">Price</a>
+            <a href="#amenities" className="px-3 py-1 rounded-full hover:bg-gray-100">Amenities</a>
+            <a href="#gallery" className="px-3 py-1 rounded-full hover:bg-gray-100">Gallery</a>
+            <a href="#location" className="px-3 py-1 rounded-full hover:bg-gray-100">Location</a>
+            <a href="#contact" className="px-3 py-1 rounded-full hover:bg-gray-100">Contact</a>
+          </nav>
+        </div>
+      </div>
 
       <main className="container mx-auto px-6 py-12">
         <div className="mb-6"><a href="/" className="text-sm text-blue-600 hover:underline">← Back to Projects</a></div>
