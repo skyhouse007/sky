@@ -1,23 +1,7 @@
 // src/components/Projects.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-const projects = [
-  {
-    id: 'tvs-thanisandra',
-    name: 'TVS Emerald Thanisandra',
-    location: 'Thanisandra, North Bangalore',
-    price: '₹ 1.32 Cr* Onwards',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop',
-  },
-  {
-    id: 'godrej-msr-city',
-    name: 'Godrej MSR City',
-    location: 'Shettigere, Bangalore',
-    price: '₹ 1.23 Cr* Onwards',
-    image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1600&auto=format&fit=crop',
-  },
-];
+import projects from '../data/projects';
 
 function Projects() {
   return (
@@ -32,9 +16,7 @@ function Projects() {
               <p className="text-gray-600 mb-4">{project.location}</p>
               <div className="flex justify-between items-center">
                 <p className="text-lg font-bold text-blue-600">{project.price}</p>
-                <Link to={`/project/${project.id}`} className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
-                  View Details
-                </Link>
+                <Link to={project.path} className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">View Details</Link>
               </div>
             </div>
           </div>
