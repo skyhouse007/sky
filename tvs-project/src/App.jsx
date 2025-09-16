@@ -20,7 +20,10 @@ function App() {
           <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
           <Link to="/" className="flex items-center gap-3">
             <img src="https://cdn.builder.io/api/v1/image/assets%2F1600d1bbc2554feab633ece721d56015%2F82204d7746c54a13afe18a0d89ca44b2?format=webp&width=200" alt="Logo" className="h-10 w-10 rounded-full object-cover ring-2 ring-blue-600/30" />
-            <span className="text-xl font-extrabold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Akash Khandelwal</span>
+            <div className="leading-tight">
+              <span className="block text-xl font-extrabold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Akash Khandelwal</span>
+              <span className="block text-xs text-gray-600 dark:text-gray-300">Trusted Real-Estate Advisor</span>
+            </div>
           </Link>
           <div className="flex items-center gap-4 text-sm">
             <Link to="/" className={`hover:text-blue-600 ${location.pathname==='/'?'text-blue-600':'text-gray-700'}`}>Home</Link>
