@@ -172,7 +172,8 @@ function SiteVisitForm() {
         <textarea id="notes" name="notes" value={formData.notes} onChange={handleChange} rows="3" className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Any specific preferences or questions" />
       </div>
 
-      <button type="submit" className="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 transition duration-300">Book Now</button>
+      {error && <p className="text-red-600 text-sm mb-3" role="alert">{error}</p>}
+      <button type="submit" disabled={loading} className={`w-full font-bold py-3 px-4 rounded-lg transition duration-300 ${loading ? 'bg-blue-300 text-white cursor-not-allowed' : 'bg-blue-600 text-white hover:bg-blue-700'}`}>{loading ? 'Submitting...' : 'Book Now'}</button>
     </form>
   );
 }
