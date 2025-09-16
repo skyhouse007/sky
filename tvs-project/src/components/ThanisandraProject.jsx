@@ -3,7 +3,6 @@ import React from 'react';
 import Slider from 'react-slick';
 import SiteVisitForm from '../SiteVisitForm';
 import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
 function ThanisandraProject() {
   const amenities = [
